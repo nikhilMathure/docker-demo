@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag nikhilmathure/demo-push-git:latest
+      run: docker build . --file Dockerfile --tag nikhilmathure/ubuntu-demo:v1
     - name: docker push image
-      run: docker login -u nikhilmathure -p ${{ secrets.DOCKER_TOKEN2 }} && docker push nikhilmathure/demo-push-git:latest
+      run: docker login -u nikhilmathure -p ${{ secrets.DOCKER_TOKEN2 }} && docker push nikhilmathure/ubuntu-demo:v1
